@@ -8,6 +8,7 @@ import PageContext from "../contexts/pageContext";
 import selectiveClassnames from "../helpers/selectiveClassnames";
 import BlogService from "../services/blogService";
 import BlankPageContainer from "./layout/blankPageContainer";
+import DefaultImage from '../images/Bible_stand_up_read.jpg';
 
 export default function Preaches(): JSX.Element {
     const { setTitle, setUrl, scrollPercentage } = useContext(PageContext);
@@ -21,7 +22,7 @@ export default function Preaches(): JSX.Element {
     const [since, setSince] = useState<string>();
     const [to, setTo] = useState<string>();
 
-    useEffect(() => { setTitle('Prédicas'); setUrl('/src/images/Bible_stand_up_read.jpg'); }, [])
+    useEffect(() => { setTitle('Prédicas'); setUrl(DefaultImage); }, [])
     useEffect(() => { getPage() }, [page, hasMore, search, since, to])
     useEffect(() => { if (scrollPercentage >= 80 && hasMore && !isLoading) setPage(page + 1) }, [scrollPercentage, hasMore, isLoading])
 

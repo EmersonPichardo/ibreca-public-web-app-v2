@@ -5,6 +5,7 @@ import TitleContext from "../contexts/pageContext";
 import selectiveClassnames from "../helpers/selectiveClassnames";
 import EmailService from "../services/emailService";
 import BlankPageContainer from "./layout/blankPageContainer";
+import DefaultImage from '../images/Bible_stand_up_read.jpg';
 
 export default function VisitUs(): JSX.Element {
     const { setTitle, setUrl } = useContext(TitleContext);
@@ -14,7 +15,7 @@ export default function VisitUs(): JSX.Element {
 
     useEffect(() => {
         setTitle('Visítanos');
-        setUrl('/src/images/Bible_stand_up_read.jpg');
+        setUrl(DefaultImage);
     }, [])
 
     const sendEmail = async (event: any) => {

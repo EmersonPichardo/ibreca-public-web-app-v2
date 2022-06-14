@@ -5,7 +5,7 @@ import BlogService from "../services/blogService";
 import BlankPageContainer from "./layout/blankPageContainer";
 import ReactPlayer from 'react-player'
 import ParseDate from "../helpers/DateParser";
-import { ArrowLeftIcon, BackspaceIcon, ChevronLeftIcon } from "@heroicons/react/outline";
+import { ChevronLeftIcon } from "@heroicons/react/outline";
 import selectiveClassnames from "../helpers/selectiveClassnames";
 
 export default function PreachesDetails(): JSX.Element {

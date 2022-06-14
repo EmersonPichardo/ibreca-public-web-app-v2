@@ -11,6 +11,7 @@ import ServiceCard from "../components/serviceCard";
 import Carousel from "../components/carousel";
 import RecentEntries from "../components/recentEntries";
 import ButtonLarge from "../components/buttonLarge";
+import DefaultImage from '../images/Bible_stand_up_read.jpg';
 
 export default function Home(): JSX.Element {
     const [isScrollDownTextVisible, setScrollDownTextVisibility] = useState<boolean>(false);
@@ -43,7 +44,7 @@ export default function Home(): JSX.Element {
             <div className='h-screen min-h-[500px] w-screen overflow-hidden'>
                 <Navbar links={navbarLinks} />
 
-                <div className='bg-[url("/src/images/Bible%20on%20stand.jpg")] bg-cover bg-center h-screen w-screen fixed top-0 -z-10'>
+                <div className={`bg-[url("${DefaultImage}")] bg-cover bg-center h-screen w-screen fixed top-0 -z-10`}>
                     <div className='h-full w-full bg-black opacity-60'></div>
                 </div>
 

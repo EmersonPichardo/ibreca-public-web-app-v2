@@ -3,13 +3,14 @@ import Paragraph from "../components/paragraph";
 import Quote from "../components/quote";
 import TitleContext from "../contexts/pageContext";
 import StaticPageContainer from "./layout/staticPageContainer";
+import DefaultImage from '../images/Bible_stand_up_read.jpg';
 
 export default function Faith(): JSX.Element {
     const { setTitle, setUrl } = useContext(TitleContext);
 
     useEffect(() => {
         setTitle('Declaración de fé');
-        setUrl('/src/images/Bible_stand_up_read.jpg');
+        setUrl(DefaultImage);
     }, [])
 
     return (
