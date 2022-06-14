@@ -3,7 +3,7 @@ import { CalendarIcon, ChevronDoubleDownIcon, SpeakerphoneIcon } from "@heroicon
 import { Fragment, useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "./layout/footer";
-import Navbar from "../components/navbar";
+import Navbar from "./layout/navbar";
 import { navbarLinks } from "./layout/layout.config";
 import AnnouncementService from "../services/announcementService"
 import BlogService from "../services/blogService"
@@ -11,7 +11,8 @@ import ServiceCard from "../components/serviceCard";
 import Carousel from "../components/carousel";
 import RecentEntries from "../components/recentEntries";
 import ButtonLarge from "../components/buttonLarge";
-import DefaultImage from '../images/Bible_stand_up_read.jpg';
+import DefaultImage from '../images/Bible_on_stand.jpg';
+import LogoImage from '../images/Logo_sin_letas_sin_fondo.png'
 
 export default function Home(): JSX.Element {
     const [isScrollDownTextVisible, setScrollDownTextVisibility] = useState<boolean>(false);
@@ -44,15 +45,13 @@ export default function Home(): JSX.Element {
             <div className='h-screen min-h-[500px] w-screen overflow-hidden'>
                 <Navbar links={navbarLinks} />
 
-                <div className={`bg-[url("${DefaultImage}")] bg-cover bg-center h-screen w-screen fixed top-0 -z-10`}>
-                    <div className='h-full w-full bg-black opacity-60'></div>
-                </div>
-
+                <img src={DefaultImage} className='object-cover object-center h-screen w-screen fixed top-0 -z-10' />
+                <div className='h-screen w-screen bg-black opacity-60 fixed -z-10'></div>
                 <div className='backdrop-blur-md h-screen w-screen fixed -z-10'></div>
 
                 <div className='flex flex-col justify-evenly text-white text-center h-full'>
                     <div className='flex flex-col items-center gap-2 md:gap-4 p-4'>
-                        <img src='/src/images/Logo sin letas - sin fondo.png' className='drop-shadow-md h-20 md:h-28' />
+                        <img src={LogoImage} className='drop-shadow-md h-20 md:h-28' />
                         <p className='drop-shadow-md text-xl md:text-3xl lg:text-5xl'>IBRECA</p>
                         <p className='font-medium drop-shadow-md text-3xl md:text-5xl lg:text-6xl xl:text-7xl'>Iglesia Bautista Redención en la Caleta</p>
                     </div>

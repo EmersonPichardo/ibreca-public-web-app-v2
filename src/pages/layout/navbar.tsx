@@ -2,8 +2,9 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import NavbarDropdown, { NavbarDropdownProps } from './navbarDropdown';
-import NavbarLink, { NavbarLinkProps } from './navbarLink';
+import NavbarDropdown, { NavbarDropdownProps } from '../../components/navbarDropdown';
+import NavbarLink, { NavbarLinkProps } from '../../components/navbarLink';
+import LogoImage from '../../images/Logo_sin_letas_sin_fondo.png'
 
 export class NavbarProps {
     links: (NavbarLinkProps | NavbarDropdownProps)[]
@@ -22,7 +23,7 @@ export default function Navbar({ links }: NavbarProps): JSX.Element {
                         <span className='sr-only'>ibreca</span>
                         <img
                             className='h-8 w-auto md:h-10'
-                            src='/src/images/Logo sin letas - sin fondo.png'
+                            src={LogoImage}
                             alt='ibreca'
                         />
                     </Link>
@@ -61,7 +62,7 @@ export default function Navbar({ links }: NavbarProps): JSX.Element {
                                                     <span className='sr-only'>ibreca</span>
                                                     <img
                                                         className='h-8 w-auto'
-                                                        src='/src/images/Logo sin letas - sin fondo.png'
+                                                        src={LogoImage}
                                                         alt='ibreca'
                                                     />
                                                 </a>

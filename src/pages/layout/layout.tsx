@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "./footer";
-import Navbar from "../../components/navbar";
+import Navbar from "./navbar";
 import { PageContext } from "../../contexts/pageContext";
 import { navbarLinks } from "./layout.config";
 import Header from "./header";
