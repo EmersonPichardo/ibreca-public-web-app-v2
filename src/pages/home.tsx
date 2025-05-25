@@ -58,7 +58,7 @@ export default function Home(): JSX.Element {
 
                     <div className='flex flex-col md:flex-row justify-center gap-4 md:gap-6'>
                         <div>
-                            <Link to='/blog'>
+                            <Link to='/predicas'>
                                 <ButtonLarge text='Visita nuestras prédicas' icon={SpeakerphoneIcon} />
                             </Link>
                         </div>

@@ -18,9 +18,8 @@ export default function PreachesDetails(): JSX.Element {
     useEffect(() => { setTitle(entry.title); setUrl(entry.coverUrl) }, [entry])
 
     const getEntry = async () => {
-        const response = await BlogService.GetDatail(Number.parseInt(id!));
+        const response = await BlogService.GetDetail(Number.parseInt(id!));
         if (response.isOk) setEntry(response.data);
-        console.log(response.data)
     }
 
     return (
