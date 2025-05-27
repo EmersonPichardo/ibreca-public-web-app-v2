@@ -29,7 +29,7 @@ export default function PreachesDetails(): JSX.Element {
                 <span className='text-xl font-medium'>Volver</span>
             </a>
 
-            <p className='text-sm'>{ParseDate(entry.publicationDate)}</p>
+            <p className='text-sm'>{entry.publicationDate ? ParseDate(entry.publicationDate) : null}</p>
 
             <div className={selectiveClassnames(entry.headerUrl ? '' : 'hidden', 'bg-slate-200 ring-1 ring-slate-300 drop-shadow-lg w-full aspect-video mt-4 mb-8 rounded-lg overflow-hidden')}>
                 <ReactPlayer width='100%' height='100%' controls url={entry.headerUrl} />
